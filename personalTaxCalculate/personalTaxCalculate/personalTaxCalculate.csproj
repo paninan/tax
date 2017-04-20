@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{557D031A-09E7-4CA8-81A5-2EE5B458F9F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>personalTaxCalculate</RootNamespace>
+    <AssemblyName>personalTaxCalculate</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalculate.Designer.cs">
+      <DependentUpon>frmCalculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChildrenParentsCripple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChildrenParentsCripple.Designer.cs">
+      <DependentUpon>frmChildrenParentsCripple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDonate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDonate.Designer.cs">
+      <DependentUpon>frmDonate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHellp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHellp.Designer.cs">
+      <DependentUpon>frmHellp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInsurance.Designer.cs">
+      <DependentUpon>frmInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInterestHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterestHome.Designer.cs">
+      <DependentUpon>frmInterestHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLTF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLTF.Designer.cs">
+      <DependentUpon>frmLTF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelationStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelationStatus.Designer.cs">
+      <DependentUpon>frmRelationStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRMF.Designer.cs">
+      <DependentUpon>frmRMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalary.Designer.cs">
+      <DependentUpon>frmSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSocialInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSocialInsurance.Designer.cs">
+      <DependentUpon>frmSocialInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSumary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSumary.Designer.cs">
+      <DependentUpon>frmSumary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxManager.cs" />
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalculate.resx">
+      <DependentUpon>frmCalculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChildrenParentsCripple.resx">
+      <DependentUpon>frmChildrenParentsCripple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDonate.resx">
+      <DependentUpon>frmDonate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHellp.resx">
+      <DependentUpon>frmHellp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInsurance.resx">
+      <DependentUpon>frmInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInterestHome.resx">
+      <DependentUpon>frmInterestHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLTF.resx">
+      <DependentUpon>frmLTF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelationStatus.resx">
+      <DependentUpon>frmRelationStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRMF.resx">
+      <DependentUpon>frmRMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalary.resx">
+      <DependentUpon>frmSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSocialInsurance.resx">
+      <DependentUpon>frmSocialInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSumary.resx">
+      <DependentUpon>frmSumary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-grandparents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-newborn-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cripple-flat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wheelchair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_512pxGREY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-newlyweds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divorce-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divorce-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divorce-red1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divorce-red2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051-pantone-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-protection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-boy-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-is-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-grandparents1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stamp-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coins-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051-edit-tools-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-home-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\get-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\051-pantone-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flood_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floodIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\educationIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\presentation-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-boy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\031-boy-11.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
