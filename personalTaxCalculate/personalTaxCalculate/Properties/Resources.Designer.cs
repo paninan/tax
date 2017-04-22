@@ -193,6 +193,16 @@ namespace personalTaxCalculate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20151012_561baeb6cbfda_210x210 {
+            get {
+                object obj = ResourceManager.GetObject("20151012_561baeb6cbfda-210x210", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coin_10 {
             get {
                 object obj = ResourceManager.GetObject("coin-10", resourceCulture);
@@ -376,6 +386,16 @@ namespace personalTaxCalculate.Properties {
         internal static System.Drawing.Bitmap presentation_12 {
             get {
                 object obj = ResourceManager.GetObject("presentation-12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_flat {
+            get {
+                object obj = ResourceManager.GetObject("search-flat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

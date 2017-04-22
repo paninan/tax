@@ -77,11 +77,13 @@ namespace personalTaxCalculate
         private double donateEducation = 0;
         private double donateFlood = 0;
 
-        // init Cal
+        // frmReport
         private double netIncome = 0;
         private double taxRate = 0.5;
         private double taxMoneyRate = 0;
         private double taxRateFix = 0;
+
+        private double exemsion = 0;
 
         // helpers
         public string PersonalID { get => personalID; set => personalID = value; }
@@ -131,6 +133,12 @@ namespace personalTaxCalculate
         public bool IsDonateEducation { get => isDonateEducation; set => isDonateEducation = value; }
         public bool IsDonateGeneral { get => isDonateGeneral; set => isDonateGeneral = value; }
         public double PersonalSalary1 { get => personalSalary; set => personalSalary = value; }
+        public double NetIncome { get => NetIncome; set => NetIncome = value; }
+        public double TaxRate { get => taxRate; set => taxRate = value; }
+        public double TaxMoneyRate { get => taxMoneyRate; set => taxMoneyRate = value; }
+        public double TaxRateFix { get => taxRateFix; set => taxRateFix = value; }
+        public double Exemsion { get => exemsion; set => exemsion = value; }
+
 
 
         // calulator
@@ -138,59 +146,59 @@ namespace personalTaxCalculate
         {
             // net Income 
             // check range
-            if (netIncome <= 150000)                                  // 1
+            if (NetIncome <= 150000)                                  // 1
             {
-                taxRate = 0;
-                taxMoneyRate = 150000;
-                taxRateFix = 0;
+                TaxRate = 0;
+                TaxMoneyRate = 150000;
+                TaxRateFix = 0;
             }
-            else if (netIncome >= 150001 && netIncome <= 300000)       // 2
+            else if (NetIncome >= 150001 && NetIncome <= 300000)       // 2
             {
-                taxRate = 0.5;
-                taxMoneyRate = 150000;
-                taxRateFix = 0;
+                TaxRate = 0.5;
+                TaxMoneyRate = 150000;
+                TaxRateFix = 0;
 
             }
-            else if (netIncome >= 300001 && netIncome <= 500000)        // 3
+            else if (NetIncome >= 300001 && NetIncome <= 500000)        // 3
             {
-                taxMoneyRate = 300000;
-                taxRate = 0.1;
-                taxRateFix = 7500;
+                TaxMoneyRate = 300000;
+                TaxRate = 0.1;
+                TaxRateFix = 7500;
 
             }
-            else if (netIncome >= 500001 && netIncome <= 750000)        // 4
+            else if (NetIncome >= 500001 && NetIncome <= 750000)        // 4
             {
-                taxMoneyRate = 27500;
-                taxRate = 0.15;
-                taxRateFix = 65000;
+                TaxMoneyRate = 27500;
+                TaxRate = 0.15;
+                TaxRateFix = 65000;
             }
-            else if (netIncome >= 750001 && netIncome <= 1000000)        // 5
+            else if (NetIncome >= 750001 && NetIncome <= 1000000)        // 5
             {
-                taxMoneyRate = 750000;
-                taxRate = 0.2;
-                taxRateFix = 65000;
+                TaxMoneyRate = 750000;
+                TaxRate = 0.2;
+                TaxRateFix = 65000;
             }
-            else if (netIncome >= 1000001 && netIncome <= 2000000)        // 6
+            else if (NetIncome >= 1000001 && NetIncome <= 2000000)        // 6
             {
-                taxMoneyRate = 1000000;
-                taxRate = 0.25;
-                taxRateFix = 115000;
+                TaxMoneyRate = 1000000;
+                TaxRate = 0.25;
+                TaxRateFix = 115000;
             }
-            else if (netIncome >= 2000001 && netIncome <= 5000000)        // 7
+            else if (NetIncome >= 2000001 && NetIncome <= 5000000)        // 7
             {
-                taxMoneyRate = 2000000;
-                taxRate = 0.30;
-                taxRateFix = 365000;
+                TaxMoneyRate = 2000000;
+                TaxRate = 0.30;
+                TaxRateFix = 365000;
             }
-            else if (netIncome >= 5000001)                                 // 8
+            else if (NetIncome >= 5000001)                                 // 8
             {
-                taxMoneyRate = 5000000;
-                taxRate = 0.35;
-                taxRateFix = 1265000;
+                TaxMoneyRate = 5000000;
+                TaxRate = 0.35;
+                TaxRateFix = 1265000;
             }
             else
             {
-                taxRate = 0;
+                TaxRate = 0;
             }
 
         }
@@ -199,11 +207,27 @@ namespace personalTaxCalculate
         private void calNetIncomePersonal()
         {
             // เเงินได้สุทธิ
+           // NetIncome =  personalSalary = 
+
         }
 
         private void calExemsionPersonal()
         {
+            //double exemsion;
+            double exemsionPersonal = this.getExemsionPersonal();
+            double exemsionRelation = this.getExemsionRelation();
+            double exemsionChilden = this.getExemsionChilden();
+            double exemsionParent = this.getExemsionParent();
+            double exemsionCripple = this.getExemsionCripple();
+            double exemsionSocialInsurance = this.getExemsionSocialInsurance();
+            double exemsionInsurance = this.getExemsionInsurance();
+            double exemsionLTF = this.getExemsionLTF();
+            double exemsionRMF = this.getExemsionRMF();
+            double exemsionInterestHome = this.getExensionInterestHome();
+            double exemsionDonate = this.getExemsionDonate();
+
             // ค่าลดหย่อน
+            Exemsion = ( exemsionPersonal + exemsionRelation + exemsionChilden + exemsionParent + exemsionCripple + exemsionSocialInsurance + exemsionInsurance +exemsionLTF + exemsionRMF + exemsionInterestHome + exemsionDonate);
         }
 
         private void calPayPersonal()
@@ -306,9 +330,7 @@ namespace personalTaxCalculate
             return sum;
         }
 
-        //7. เบี้ยประกันชีวิต มี 2 ประเภท คือ
-        //– ประกันชีวิต(แบบทั่วไป) ลดหย่อนได้สูงสุดไม่เกิน 100,000 บาท
-        //– ประกันชีวิต(แบบบำนาญ) ลดหย่อนได้ 15% ของเงินได้ สูงสุดไม่เกิน 200,000 บาท
+        //7. เบี้ยประกันชีวิต มี 2 ประเภท 
         public double getExemsionInsurance()
         {
             double sum = 0;
@@ -425,7 +447,6 @@ namespace personalTaxCalculate
         }
 
         //10.ลดหย่อนดอกเบี้ยที่อยู่อาศัย
-    
         public double getExensionInterestHome()
         {
             if(InterrestHome > 100000)
@@ -468,7 +489,7 @@ namespace personalTaxCalculate
         }
 
 
-            public string getRelationStatus()
+        public string getRelationStatus()
         {
             if(isSingleChecked)
             {
