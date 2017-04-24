@@ -105,6 +105,12 @@
     <Compile Include="frmRelationStatus.Designer.cs">
       <DependentUpon>frmRelationStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRMF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,12 @@
     </Compile>
     <Compile Include="frmSalary.Designer.cs">
       <DependentUpon>frmSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSocialInsurance.cs">
       <SubType>Form</SubType>
@@ -163,11 +175,17 @@
     <EmbeddedResource Include="frmRelationStatus.resx">
       <DependentUpon>frmRelationStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRMF.resx">
       <DependentUpon>frmRMF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalary.resx">
       <DependentUpon>frmSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSocialInsurance.resx">
       <DependentUpon>frmSocialInsurance.cs</DependentUpon>
@@ -311,6 +329,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\20151012_561baeb6cbfda-210x210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tax_stair08.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

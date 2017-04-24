@@ -53,5 +53,15 @@ namespace personalTaxCalculate
 
             frm.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmSearch frm = new frmSearch();
+            frm.TaxMng = taxMng;
+
+            frm.Show();
+
+        }
     }
 }

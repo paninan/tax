@@ -41,3 +41,5 @@ C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTax
 C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTaxCalculate.csproj.GenerateResource.Cache
 C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTaxCalculate.exe
 C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTaxCalculate.pdb
+C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTaxCalculate.frmReport.resources
+C:\Repo\Waan\tax\personalTaxCalculate\personalTaxCalculate\obj\Debug\personalTaxCalculate.frmSearch.resources

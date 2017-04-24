@@ -206,11 +206,17 @@ namespace personalTaxCalculate
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            
             // save obj
+            taxMng.IsDonateGeneral = checkBox1.Checked ;
+            taxMng.IsDonateEducation = checkBox2.Checked;
+            taxMng.IsDonateFlood = checkBox3.Checked;
+
             taxMng.DonateGeneral = Utils.convertDouble(textBox1.Text);
             taxMng.DonateEducation = Utils.convertDouble(textBox2.Text);
             taxMng.DonateFlood = Utils.convertDouble(textBox3.Text);
 
+            taxMng.getExemsionDonate();
             this.Hide();
 
             frmSumary frm = new frmSumary();

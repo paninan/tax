@@ -393,6 +393,16 @@ namespace personalTaxCalculate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap receipt {
+            get {
+                object obj = ResourceManager.GetObject("receipt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_flat {
             get {
                 object obj = ResourceManager.GetObject("search-flat", resourceCulture);
@@ -406,6 +416,86 @@ namespace personalTaxCalculate.Properties {
         internal static System.Drawing.Bitmap stamp_1 {
             get {
                 object obj = ResourceManager.GetObject("stamp-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair01 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair02 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair03 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair04 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair05 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair06 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair07 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tax_stair08 {
+            get {
+                object obj = ResourceManager.GetObject("tax_stair08", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

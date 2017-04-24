@@ -33,8 +33,13 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblExemsionDonate = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblExemsionRelationStatus = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
+            this.lblExemsionInterrestHome = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblExemsionRMF = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblExemsionLTF = new System.Windows.Forms.Label();
@@ -65,18 +70,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblExemsionInterrestHome = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblExemsionRelationStatus = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
-            this.lblExemsionDonate = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,6 +106,7 @@
             this.btnNext.TabIndex = 17;
             this.btnNext.Text = "ต่อไป";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // button3
             // 
@@ -129,16 +130,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(784, 641);
             this.panel2.TabIndex = 35;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::personalTaxCalculate.Properties.Resources.presentation_12;
-            this.pictureBox1.Location = new System.Drawing.Point(332, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox3
             // 
@@ -172,6 +163,63 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ข้อมูลลดหย่อน";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // lblExemsionDonate
+            // 
+            this.lblExemsionDonate.AutoSize = true;
+            this.lblExemsionDonate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblExemsionDonate.Location = new System.Drawing.Point(261, 490);
+            this.lblExemsionDonate.Name = "lblExemsionDonate";
+            this.lblExemsionDonate.Size = new System.Drawing.Size(19, 25);
+            this.lblExemsionDonate.TabIndex = 35;
+            this.lblExemsionDonate.Text = "-";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(25, 490);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(123, 25);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "11.เงินบริจาค";
+            // 
+            // lblExemsionRelationStatus
+            // 
+            this.lblExemsionRelationStatus.AutoSize = true;
+            this.lblExemsionRelationStatus.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblExemsionRelationStatus.Location = new System.Drawing.Point(261, 99);
+            this.lblExemsionRelationStatus.Name = "lblExemsionRelationStatus";
+            this.lblExemsionRelationStatus.Size = new System.Drawing.Size(19, 25);
+            this.lblExemsionRelationStatus.TabIndex = 33;
+            this.lblExemsionRelationStatus.Text = "-";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(25, 99);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(86, 25);
+            this.lbl.TabIndex = 32;
+            this.lbl.Text = "2.คู่สมรส";
+            // 
+            // lblExemsionInterrestHome
+            // 
+            this.lblExemsionInterrestHome.AutoSize = true;
+            this.lblExemsionInterrestHome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblExemsionInterrestHome.Location = new System.Drawing.Point(261, 451);
+            this.lblExemsionInterrestHome.Name = "lblExemsionInterrestHome";
+            this.lblExemsionInterrestHome.Size = new System.Drawing.Size(19, 25);
+            this.lblExemsionInterrestHome.TabIndex = 31;
+            this.lblExemsionInterrestHome.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 451);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(206, 25);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "10.ดอกเบี้ยซื้อที่อยู่อาศัย";
             // 
             // lblExemsionRMF
             // 
@@ -472,62 +520,15 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "นามสกุล";
             // 
-            // lblExemsionInterrestHome
+            // pictureBox1
             // 
-            this.lblExemsionInterrestHome.AutoSize = true;
-            this.lblExemsionInterrestHome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionInterrestHome.Location = new System.Drawing.Point(261, 451);
-            this.lblExemsionInterrestHome.Name = "lblExemsionInterrestHome";
-            this.lblExemsionInterrestHome.Size = new System.Drawing.Size(19, 25);
-            this.lblExemsionInterrestHome.TabIndex = 31;
-            this.lblExemsionInterrestHome.Text = "-";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 451);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(206, 25);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "10.ดอกเบี้ยซื้อที่อยู่อาศัย";
-            // 
-            // lblExemsionRelationStatus
-            // 
-            this.lblExemsionRelationStatus.AutoSize = true;
-            this.lblExemsionRelationStatus.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionRelationStatus.Location = new System.Drawing.Point(261, 99);
-            this.lblExemsionRelationStatus.Name = "lblExemsionRelationStatus";
-            this.lblExemsionRelationStatus.Size = new System.Drawing.Size(19, 25);
-            this.lblExemsionRelationStatus.TabIndex = 33;
-            this.lblExemsionRelationStatus.Text = "-";
-            // 
-            // lbl
-            // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(25, 99);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(86, 25);
-            this.lbl.TabIndex = 32;
-            this.lbl.Text = "2.คู่สมรส";
-            // 
-            // lblExemsionDonate
-            // 
-            this.lblExemsionDonate.AutoSize = true;
-            this.lblExemsionDonate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionDonate.Location = new System.Drawing.Point(261, 490);
-            this.lblExemsionDonate.Name = "lblExemsionDonate";
-            this.lblExemsionDonate.Size = new System.Drawing.Size(19, 25);
-            this.lblExemsionDonate.TabIndex = 35;
-            this.lblExemsionDonate.Text = "-";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(25, 490);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(123, 25);
-            this.label16.TabIndex = 34;
-            this.label16.Text = "11.เงินบริจาค";
+            this.pictureBox1.Image = global::personalTaxCalculate.Properties.Resources.presentation_12;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // frmSumary
             // 
@@ -544,13 +545,13 @@
             this.Load += new System.EventHandler(this.frmSumary_Load);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

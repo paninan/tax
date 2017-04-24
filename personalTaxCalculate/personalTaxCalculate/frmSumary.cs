@@ -79,5 +79,14 @@ namespace personalTaxCalculate
             frm.Show();
 
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmReport frm = new frmReport();
+            frm.TaxMng = taxMng;
+            frm.Show();
+
+        }
     }
 }

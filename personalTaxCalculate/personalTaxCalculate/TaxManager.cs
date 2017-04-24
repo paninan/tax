@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,11 +80,13 @@ namespace personalTaxCalculate
 
         // frmReport
         private double netIncome = 0;
-        private double taxRate = 0.5;
+        private double taxRate = 0;
         private double taxMoneyRate = 0;
         private double taxRateFix = 0;
 
         private double exemsion = 0;
+        private double netTax = 0;
+        private double expense = 0;
 
         // helpers
         public string PersonalID { get => personalID; set => personalID = value; }
@@ -133,13 +136,19 @@ namespace personalTaxCalculate
         public bool IsDonateEducation { get => isDonateEducation; set => isDonateEducation = value; }
         public bool IsDonateGeneral { get => isDonateGeneral; set => isDonateGeneral = value; }
         public double PersonalSalary1 { get => personalSalary; set => personalSalary = value; }
-        public double NetIncome { get => NetIncome; set => NetIncome = value; }
+        public double NetIncome { get => netIncome; set => netIncome = value; }
         public double TaxRate { get => taxRate; set => taxRate = value; }
         public double TaxMoneyRate { get => taxMoneyRate; set => taxMoneyRate = value; }
         public double TaxRateFix { get => taxRateFix; set => taxRateFix = value; }
         public double Exemsion { get => exemsion; set => exemsion = value; }
+        public double NetTax { get => netTax; set => netTax = value; }
+        public double Expense { get => expense; set => expense = value; }
 
-
+        // Connectinon
+        private static String CONN_STATE_FAIL = "Fail";
+        private static String CONN_STATE_OK = "Success";
+        private static String connectionString = "Data Source=.;Initial Catalog=projectTax;Integrated Security=True";
+        private SqlConnection conn = null;
 
         // calulator
         private void calTaxRate()
@@ -154,7 +163,7 @@ namespace personalTaxCalculate
             }
             else if (NetIncome >= 150001 && NetIncome <= 300000)       // 2
             {
-                TaxRate = 0.5;
+                TaxRate = 0.05;
                 TaxMoneyRate = 150000;
                 TaxRateFix = 0;
 
@@ -203,15 +212,15 @@ namespace personalTaxCalculate
 
         }
 
-
+        // เเงินได้สุทธิ
         private void calNetIncomePersonal()
         {
-            // เเงินได้สุทธิ
-           // NetIncome =  personalSalary = 
+            // เงินได้ - ค่าใช้จ่าย - ค่าลดหย่อน = เงินได้สุทธิ
+            this.NetIncome = this.PersonalSalary - this.calPayPersonal() - this.calExemsionPersonal();
 
         }
-
-        private void calExemsionPersonal()
+        // ค่าลดหย่อน
+        private double calExemsionPersonal()
         {
             //double exemsion;
             double exemsionPersonal = this.getExemsionPersonal();
@@ -226,21 +235,35 @@ namespace personalTaxCalculate
             double exemsionInterestHome = this.getExensionInterestHome();
             double exemsionDonate = this.getExemsionDonate();
 
-            // ค่าลดหย่อน
+           
             Exemsion = ( exemsionPersonal + exemsionRelation + exemsionChilden + exemsionParent + exemsionCripple + exemsionSocialInsurance + exemsionInsurance +exemsionLTF + exemsionRMF + exemsionInterestHome + exemsionDonate);
+
+            return Exemsion;
         }
 
-        private void calPayPersonal()
+        // ค่าใช้จ่าย
+        private double calPayPersonal()
         {
-            // ค่าใช้จ่าย
+            
+            double tmp = this.PersonalSalary * 0.4;
+
+            if (tmp >= 60000)
+            {
+                tmp = 60000;
+            }
+
+            this.Expense = tmp;
+            return tmp;
         }
 
-        private void calTaxPersonal()
+        public void CalNetTax()
         {
-            //เงินได้ - ค่าใช้จ่าย - ค่าลดหย่อน = เงินได้สุทธิ
+            //ภาษีจ่าย =   [ ( เงินได้สุทธิ - taxMoney ) * taxRate ] + TaxRateFix
+            calNetIncomePersonal();
+            calTaxRate();
+            Console.WriteLine(this.NetIncome + " -" +this.TaxMoneyRate+"*" + this.TaxRate+"+"+ this.TaxRateFix);
 
-
-            // [ เงินได้สุทธิ - taxMoney ] * taxRate = ?
+            this.NetTax = ( (this.NetIncome - this.TaxMoneyRate) * this.TaxRate ) + this.TaxRateFix;
         }
 
 
@@ -466,6 +489,7 @@ namespace personalTaxCalculate
             double sum =0;
             double totalIncome;
             double totalIncome_10percent;
+
             totalIncome = PersonalSalary - (getExemsionPersonal() + getExemsionRelation() + getExemsionChilden() + getExemsionParent() + getExemsionCripple() + getExemsionSocialInsurance() + getExemsionInsurance() + getExemsionLTF() + getExemsionRMF() + getExensionInterestHome());
             totalIncome_10percent = totalIncome * 0.10;
             if (DonateGeneral> totalIncome_10percent)
@@ -507,9 +531,222 @@ namespace personalTaxCalculate
             }
 
             return UNKNOW;
-            
+
         }
 
+
+
+        // connection and database method
+        private Boolean connectionState()
+        {
        
+            this.conn = new SqlConnection(connectionString);
+            conn.Open();
+            Console.WriteLine("SQL Server Connection State : " + conn.State);
+            if (conn.State == System.Data.ConnectionState.Open)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void sqlExcute(String query)
+        {
+            SqlDataReader reader;
+            SqlCommand cmd = new SqlCommand(query, this.conn);
+            reader = cmd.ExecuteReader();
+
+            Console.WriteLine(reader);
+
+        }
+
+
+        //นำข้อมูลลง dataBase
+        public bool save()
+        {
+            try
+            {
+                if (connectionState())  // open db connection
+                {
+                    string sqlInsert = "INSERT INTO tax_personals" +
+                        "( personal_id,first_name,last_name,birth_date, " +
+                        "personal_salary," +
+                        "is_provident_fund,provident_fund," +
+                        "is_parent_checked,is_childen_checked,is_cripple_checked,is_parent_dad_checked,is_parent_mom_checked,qty_cripple,qty_childen_nonstudy,qty_childen_domesticstudy,qty_childen_foreignstudy," +
+                        "is_single_checked,is_marry_checked,is_divorce_checked,is_marry_income," +
+                        "is_insuance_general,is_insuranc_pension,is_insurance_parents,insurance_general,insurance_pension,insurance_parents," +
+                        "social_insurance," +
+                        "is_ltf_invest,ltf_invest," +
+                        "is_rfd1,is_rfd2,is_rfd3,is_rfd4,rfd1,rfd2,rfd3,rfd4," +
+                        "is_have_interrset,interrest_home," +
+                        "is_donate,is_donate_general,is_donate_education,donate_general,donate_education," +
+                        "net_income,tax_rate,tax_money_rate,tax_rate_fix,exemsion,net_tax,expense," +
+                        "tax_year,created_date) " +
+                        "VALUES " +
+                        "( @personal_id,@first_name,@last_name,@birth_date," +
+                        " @personal_salary," +
+                        "@is_provident_fund,@provident_fund" +
+                        ",@is_parent_checked,@is_childen_checked,@is_cripple_checked,@is_parent_dad_checked,@is_parent_mom_checked,@qty_cripple,@qty_childen_nonstudy,@qty_childen_domesticstudy,@qty_childen_foreignstudy," +
+                        "@is_single_checked,@is_marry_checked,@is_divorce_checked,@is_marry_income," +
+                        "@is_insuance_general,@is_insuranc_pension,@is_insurance_parents,@insurance_general,@insurance_pension,@insurance_parents," +
+                        "@social_insurance," +
+                        "@is_ltf_invest,@ltf_invest,@is_rfd1,@is_rfd2,@is_rfd3,@is_rfd4," +
+                        "@rfd1,@rfd2,@rfd3,@rfd4,@is_have_interrset,@interrest_home," +
+                        "@is_donate,@is_donate_general,@is_donate_education,@donate_general,@donate_education," +
+                        "@net_income,@tax_rate,@tax_money_rate,@tax_rate_fix,@exemsion,@net_tax,@expense," +
+                        "@tax_year,@created_date)";
+
+                    SqlCommand cmd = new SqlCommand(sqlInsert,this.conn);
+                    cmd.Parameters.AddWithValue("@personal_id", PersonalID);
+                    cmd.Parameters.AddWithValue("@first_name", FirstName);
+                    cmd.Parameters.AddWithValue("@last_name", LastName);
+                    cmd.Parameters.AddWithValue("@birth_date", BirthDate);
+
+                    cmd.Parameters.AddWithValue("@personal_salary",PersonalSalary);
+                    cmd.Parameters.AddWithValue("@is_provident_fund ",IsProvidentFund);
+                    cmd.Parameters.AddWithValue("@provident_fund",ProvidentFund);
+                    cmd.Parameters.AddWithValue("@is_parent_checked",IsParentChecked);
+                    cmd.Parameters.AddWithValue("@is_childen_checked",IsChildenChecked);
+                    cmd.Parameters.AddWithValue("@is_cripple_checked",IsCrippleChecked);
+                    cmd.Parameters.AddWithValue("@is_parent_dad_checked",IsParentDadChecked);
+                    cmd.Parameters.AddWithValue("@is_parent_mom_checked",IsParentMomChecked);
+                    cmd.Parameters.AddWithValue("@qty_cripple",QtyCripple);
+                    cmd.Parameters.AddWithValue("@qty_childen_nonstudy",QtyChildenNonStudy);
+                    cmd.Parameters.AddWithValue("@qty_childen_domesticstudy",QtyChildenDomesticStudy);
+                    cmd.Parameters.AddWithValue("@qty_childen_foreignStudy",QtyChildenForeignStudy);
+                    cmd.Parameters.AddWithValue("@is_single_checked",IsSingleChecked);
+                    cmd.Parameters.AddWithValue("@is_marry_checked",IsMarryChecked);
+                    cmd.Parameters.AddWithValue("@is_divorce_checked",IsDivorceChecked);
+                    cmd.Parameters.AddWithValue("@is_marry_income",IsMarryIncome);
+                    cmd.Parameters.AddWithValue("@is_insuance_general",IsInsuanceGeneral);
+                    cmd.Parameters.AddWithValue("@is_insuranc_pension",IsInsurancPension);
+                    cmd.Parameters.AddWithValue("@is_insurance_parents",IsInsuranceParents);
+                    cmd.Parameters.AddWithValue("@insurance_general",InsuranceGeneral);
+                    cmd.Parameters.AddWithValue("@insurance_pension",InsurancePension);
+                    cmd.Parameters.AddWithValue("@insurance_parents",InsuranceParents);
+                    cmd.Parameters.AddWithValue("@social_insurance",SocialInsurance);
+                    cmd.Parameters.AddWithValue("@is_ltf_invest", IsLTFinvest);
+                    cmd.Parameters.AddWithValue("@ltf_invest",LtfInvest);
+                    cmd.Parameters.AddWithValue("@is_rfd1",IsRfd1);
+                    cmd.Parameters.AddWithValue("@is_rfd2",IsRfd2);
+                    cmd.Parameters.AddWithValue("@is_rfd3",IsRfd3);
+                    cmd.Parameters.AddWithValue("@is_rfd4",IsRfd4);
+                    cmd.Parameters.AddWithValue("@rfd1",Rfd1);
+                    cmd.Parameters.AddWithValue("@rfd2",Rfd2);
+                    cmd.Parameters.AddWithValue("@rfd3",Rfd3);
+                    cmd.Parameters.AddWithValue("@rfd4",Rfd4);
+                    cmd.Parameters.AddWithValue("@is_have_interrset",IsHaveInterrset);
+                    cmd.Parameters.AddWithValue("@interrest_home",InterrestHome);
+                    cmd.Parameters.AddWithValue("@is_donate",IsDonate);
+                    cmd.Parameters.AddWithValue("@is_donate_general",IsDonateGeneral);
+                    cmd.Parameters.AddWithValue("@is_donate_education",IsDonateEducation);
+                    cmd.Parameters.AddWithValue("@donate_general",DonateGeneral);
+                    cmd.Parameters.AddWithValue("@donate_education",DonateEducation);
+                    cmd.Parameters.AddWithValue("@net_income",NetIncome);
+                    cmd.Parameters.AddWithValue("@tax_rate",TaxRate);
+                    cmd.Parameters.AddWithValue("@tax_money_rate",TaxMoneyRate);
+                    cmd.Parameters.AddWithValue("@tax_rate_fix",TaxRateFix);
+                    cmd.Parameters.AddWithValue("@exemsion",Exemsion);
+                    cmd.Parameters.AddWithValue("@net_tax",NetTax);
+                    cmd.Parameters.AddWithValue("@expense",Expense);
+                    cmd.Parameters.AddWithValue("@tax_year", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
+                    //cmd.Parameters.AddWithValue("@updated_date", Expense);
+
+                    cmd.ExecuteNonQuery();                    
+
+                }
+
+            }
+            catch (Exception e)
+            {                
+                Console.WriteLine("SQL Error " + e.Message);
+                return false;
+            }
+            finally
+            {
+                try
+                {
+                    this.conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());                    
+                }
+            }
+            
+            return true;
+        }
+
+
+        //public SqlDataReader Search(string personalId)
+        //{
+        //    SqlDataReader myReader = null;
+        //    try
+        //    {
+        //        if (connectionState())  // open db connection
+        //        {
+        //            string sqlInsert = "SELECT * FROM tax_personals WHERE personal_id = @personal_id, ";
+        //            SqlCommand cmd = new SqlCommand(sqlInsert, this.conn);
+        //            cmd.Parameters.AddWithValue("@personal_id", PersonalID);
+        //            return myReader = cmd.ExecuteReader();
+        //        }
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("SQL Error " + e.Message);                
+        //    }
+        //    finally
+        //    {
+        //        try
+        //        {
+        //            this.conn.Close();
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            Console.WriteLine(e.ToString());
+        //        }
+        //    }
+
+        //    return myReader;
+        //}
+
+
+
+        public SqlDataAdapter Search(string personalId)
+        {
+            SqlDataAdapter myDataAdapter = null;
+            try
+            {
+                if (connectionState())  // open db connection
+                {
+                    myDataAdapter = new SqlDataAdapter("SELECT * FROM tax_personals WHERE personal_id = @personal_id", this.conn);
+                    myDataAdapter.SelectCommand.Parameters.AddWithValue("@personal_id", personalId);
+                    //string sqlInsert = "SELECT * FROM tax_personals WHERE personal_id = @personal_id, ";
+                    //SqlCommand cmd = new SqlCommand(sqlInsert, this.conn);
+                    //cmd.Parameters.AddWithValue("@personal_id", PersonalID);
+                    //return myDataAdapter = cmd.();
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error " + e.Message);
+            }
+            finally
+            {
+                try
+                {
+                    this.conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
+
+            return myDataAdapter;
+        }
     }
 }

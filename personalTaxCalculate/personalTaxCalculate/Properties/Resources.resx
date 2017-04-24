@@ -127,6 +127,9 @@
   <data name="pie-chart-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pie-chart-6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="20151012_561baeb6cbfda-210x210" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20151012_561baeb6cbfda-210x210.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="031-boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\031-boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,9 @@
   </data>
   <data name="coins-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coins-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flood_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flood_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="divorce-red1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\divorce-red1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +175,14 @@
   <data name="051-pantone-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\051-pantone-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="receipt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\receipt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="graph-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flood_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flood_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search-flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="051-edit-tools-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\051-edit-tools-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,7 +235,28 @@
   <data name="031-boy-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\031-boy-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="20151012_561baeb6cbfda-210x210" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\20151012_561baeb6cbfda-210x210.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tax_stair01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

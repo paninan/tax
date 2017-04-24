@@ -30,11 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +63,34 @@
             this.panel2.Size = new System.Drawing.Size(828, 761);
             this.panel2.TabIndex = 38;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 739);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(828, 22);
+            this.statusStrip1.TabIndex = 13;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label2.Location = new System.Drawing.Point(479, 453);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "เพิ่มข้อมูล";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.Location = new System.Drawing.Point(257, 453);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 25);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "ค้นหา";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::personalTaxCalculate.Properties.Resources._20151012_561baeb6cbfda_210x210;
@@ -84,34 +112,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label3.Location = new System.Drawing.Point(257, 453);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 25);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "ค้นหา";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label2.Location = new System.Drawing.Point(479, 453);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "เพิ่มข้อมูล";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 739);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(828, 22);
-            this.statusStrip1.TabIndex = 13;
-            this.statusStrip1.Text = "statusStrip1";
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmMain
             // 
@@ -123,6 +124,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
