@@ -203,6 +203,16 @@ namespace personalTaxCalculate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_red {
+            get {
+                object obj = ResourceManager.GetObject("close_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coin_10 {
             get {
                 object obj = ResourceManager.GetObject("coin-10", resourceCulture);
@@ -276,6 +286,16 @@ namespace personalTaxCalculate.Properties {
         internal static System.Drawing.Bitmap educationIcon {
             get {
                 object obj = ResourceManager.GetObject("educationIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit {
+            get {
+                object obj = ResourceManager.GetObject("Exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +403,16 @@ namespace personalTaxCalculate.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play1600 {
+            get {
+                object obj = ResourceManager.GetObject("play1600", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap presentation_12 {
             get {
                 object obj = ResourceManager.GetObject("presentation-12", resourceCulture);
@@ -406,6 +436,16 @@ namespace personalTaxCalculate.Properties {
         internal static System.Drawing.Bitmap search_flat {
             get {
                 object obj = ResourceManager.GetObject("search-flat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_glass {
+            get {
+                object obj = ResourceManager.GetObject("search-glass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

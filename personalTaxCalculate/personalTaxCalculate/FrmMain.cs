@@ -63,5 +63,15 @@ namespace personalTaxCalculate
             frm.Show();
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            DialogResult dg =  MessageBox.Show("คุณต้องการออกจากโปรแกรมใช่หรือไม่", "คำเตือน", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dg == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
     }
 }

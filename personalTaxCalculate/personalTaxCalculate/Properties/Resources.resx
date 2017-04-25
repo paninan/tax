@@ -157,8 +157,17 @@
   <data name="graph-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="031-home-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\031-home-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="031-boy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\031-boy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +175,14 @@
   <data name="wheelchair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wheelchair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tax_stair07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="graph" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="divorce-red2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\divorce-red2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +195,9 @@
   </data>
   <data name="graph-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph-5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search-flat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-flat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +232,8 @@
   <data name="info_512pxGREY" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_512pxGREY.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="educationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\educationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tax_stair06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="graph-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graph-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,40 +241,34 @@
   <data name="get-money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\get-money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tax_stair03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="divorce-gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\divorce-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="presentation-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\presentation-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="educationIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\educationIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="051-pantone-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\051-pantone-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tax_stair08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tax_stair08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="031-boy-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\031-boy-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tax_stair01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="play1600" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play1600.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tax_stair02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tax_stair02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tax_stair03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tax_stair04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tax_stair05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tax_stair06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tax_stair07" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tax_stair08" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tax_stair08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

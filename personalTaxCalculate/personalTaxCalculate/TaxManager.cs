@@ -247,9 +247,9 @@ namespace personalTaxCalculate
             
             double tmp = this.PersonalSalary * 0.4;
 
-            if (tmp >= 60000)
+            if (tmp >= 30000)
             {
-                tmp = 60000;
+                tmp = 30000;
             }
 
             this.Expense = tmp;
@@ -561,7 +561,7 @@ namespace personalTaxCalculate
         }
 
 
-        //นำข้อมูลลง dataBase
+        //นำข้อมูล insert dataBase
         public bool save()
         {
             try
@@ -651,7 +651,6 @@ namespace personalTaxCalculate
                     cmd.Parameters.AddWithValue("@expense",Expense);
                     cmd.Parameters.AddWithValue("@tax_year", DateTime.Now);
                     cmd.Parameters.AddWithValue("@created_date", DateTime.Now);
-                    //cmd.Parameters.AddWithValue("@updated_date", Expense);
 
                     cmd.ExecuteNonQuery();                    
 
@@ -678,40 +677,148 @@ namespace personalTaxCalculate
             return true;
         }
 
+        //นำข้อมูล update dataBase
+        public bool update()
+        {
+            try
+            {
+                if (connectionState())  // open db connection
+                {
+                    string sqlInsert = "UPDATE tax_personals " +
+                        " SET "+
+                        " first_name = @first_name," +
+                        " last_name = @last_name," +
+                        " birth_date = @birth_date," +
+                        " personal_salary = @personal_salary," +
+                        " is_provident_fund = @is_provident_fund," +
+                        " provident_fund = @provident_fund," +
+                        " is_parent_checked = @is_parent_checked," +
+                        " is_childen_checked = @is_childen_checked," +
+                        " is_cripple_checked = @is_cripple_checked," +
+                        " is_parent_dad_checked = @is_parent_dad_checked," +
+                        " is_parent_mom_checked = @is_parent_mom_checked," +
+                        " qty_cripple = @qty_cripple," +
+                        " qty_childen_nonstudy = @qty_childen_nonstudy," +
+                        " qty_childen_domesticstudy = @qty_childen_domesticstudy," +
+                        " qty_childen_foreignstudy = @qty_childen_foreignstudy," +
+                        " is_single_checked = @is_single_checked," +
+                        " is_marry_checked = @is_marry_checked," +
+                        " is_divorce_checked = @is_divorce_checked," +
+                        " is_marry_income = @is_marry_income," +
+                        " is_insuance_general = @is_insuance_general," +
+                        " is_insuranc_pension = @is_insuranc_pension," +
+                        " is_insurance_parents = @is_insurance_parents," +
+                        " insurance_general = @insurance_general," +
+                        " insurance_pension = @insurance_pension," +
+                        " insurance_parents = @insurance_parents," +
+                        " social_insurance = @social_insurance," +
+                        " is_ltf_invest = @is_ltf_invest," +
+                        " ltf_invest = @ltf_invest," +
+                        " is_rfd1 = @is_rfd1," +
+                        " is_rfd2 = @is_rfd2," +
+                        " is_rfd3 = @is_rfd3," +
+                        " is_rfd4 = @is_rfd4," +
+                        " rfd1 = @rfd1," +
+                        " rfd2 = @rfd2," +
+                        " rfd3 = @rfd3," +
+                        " rfd4 = @rfd4," +
+                        " is_have_interrset = @is_have_interrset," +
+                        " interrest_home = @interrest_home," +
+                        " is_donate = @is_donate," +
+                        " is_donate_general = @is_donate_general," +
+                        " is_donate_education = @is_donate_education," +
+                        " donate_general = @donate_general," +
+                        " donate_education = @donate_education," +
+                        " net_income = @net_income," +
+                        " tax_rate = @tax_rate," +
+                        " tax_money_rate = @tax_money_rate," +
+                        " tax_rate_fix = @tax_rate_fix," +
+                        " exemsion = @exemsion," +
+                        " net_tax = @net_tax," +
+                        " expense = @expense," +
+                        " tax_year = @tax_year," +
+                        " updated_date = @updated_date" +
+                        " where personal_id = @personal_id";
 
-        //public SqlDataReader Search(string personalId)
-        //{
-        //    SqlDataReader myReader = null;
-        //    try
-        //    {
-        //        if (connectionState())  // open db connection
-        //        {
-        //            string sqlInsert = "SELECT * FROM tax_personals WHERE personal_id = @personal_id, ";
-        //            SqlCommand cmd = new SqlCommand(sqlInsert, this.conn);
-        //            cmd.Parameters.AddWithValue("@personal_id", PersonalID);
-        //            return myReader = cmd.ExecuteReader();
-        //        }
+                    SqlCommand cmd = new SqlCommand(sqlInsert, this.conn);
+                    cmd.Parameters.AddWithValue("@personal_id", PersonalID);
+                    cmd.Parameters.AddWithValue("@first_name", FirstName);
+                    cmd.Parameters.AddWithValue("@last_name", LastName);
+                    cmd.Parameters.AddWithValue("@birth_date", BirthDate);
+                    cmd.Parameters.AddWithValue("@personal_salary", PersonalSalary);
+                    cmd.Parameters.AddWithValue("@is_provident_fund ", IsProvidentFund);
+                    cmd.Parameters.AddWithValue("@provident_fund", ProvidentFund);
+                    cmd.Parameters.AddWithValue("@is_parent_checked", IsParentChecked);
+                    cmd.Parameters.AddWithValue("@is_childen_checked", IsChildenChecked);
+                    cmd.Parameters.AddWithValue("@is_cripple_checked", IsCrippleChecked);
+                    cmd.Parameters.AddWithValue("@is_parent_dad_checked", IsParentDadChecked);
+                    cmd.Parameters.AddWithValue("@is_parent_mom_checked", IsParentMomChecked);
+                    cmd.Parameters.AddWithValue("@qty_cripple", QtyCripple);
+                    cmd.Parameters.AddWithValue("@qty_childen_nonstudy", QtyChildenNonStudy);
+                    cmd.Parameters.AddWithValue("@qty_childen_domesticstudy", QtyChildenDomesticStudy);
+                    cmd.Parameters.AddWithValue("@qty_childen_foreignStudy", QtyChildenForeignStudy);
+                    cmd.Parameters.AddWithValue("@is_single_checked", IsSingleChecked);
+                    cmd.Parameters.AddWithValue("@is_marry_checked", IsMarryChecked);
+                    cmd.Parameters.AddWithValue("@is_divorce_checked", IsDivorceChecked);
+                    cmd.Parameters.AddWithValue("@is_marry_income", IsMarryIncome);
+                    cmd.Parameters.AddWithValue("@is_insuance_general", IsInsuanceGeneral);
+                    cmd.Parameters.AddWithValue("@is_insuranc_pension", IsInsurancPension);
+                    cmd.Parameters.AddWithValue("@is_insurance_parents", IsInsuranceParents);
+                    cmd.Parameters.AddWithValue("@insurance_general", InsuranceGeneral);
+                    cmd.Parameters.AddWithValue("@insurance_pension", InsurancePension);
+                    cmd.Parameters.AddWithValue("@insurance_parents", InsuranceParents);
+                    cmd.Parameters.AddWithValue("@social_insurance", SocialInsurance);
+                    cmd.Parameters.AddWithValue("@is_ltf_invest", IsLTFinvest);
+                    cmd.Parameters.AddWithValue("@ltf_invest", LtfInvest);
+                    cmd.Parameters.AddWithValue("@is_rfd1", IsRfd1);
+                    cmd.Parameters.AddWithValue("@is_rfd2", IsRfd2);
+                    cmd.Parameters.AddWithValue("@is_rfd3", IsRfd3);
+                    cmd.Parameters.AddWithValue("@is_rfd4", IsRfd4);
+                    cmd.Parameters.AddWithValue("@rfd1", Rfd1);
+                    cmd.Parameters.AddWithValue("@rfd2", Rfd2);
+                    cmd.Parameters.AddWithValue("@rfd3", Rfd3);
+                    cmd.Parameters.AddWithValue("@rfd4", Rfd4);
+                    cmd.Parameters.AddWithValue("@is_have_interrset", IsHaveInterrset);
+                    cmd.Parameters.AddWithValue("@interrest_home", InterrestHome);
+                    cmd.Parameters.AddWithValue("@is_donate", IsDonate);
+                    cmd.Parameters.AddWithValue("@is_donate_general", IsDonateGeneral);
+                    cmd.Parameters.AddWithValue("@is_donate_education", IsDonateEducation);
+                    cmd.Parameters.AddWithValue("@donate_general", DonateGeneral);
+                    cmd.Parameters.AddWithValue("@donate_education", DonateEducation);
+                    cmd.Parameters.AddWithValue("@net_income", NetIncome);
+                    cmd.Parameters.AddWithValue("@tax_rate", TaxRate);
+                    cmd.Parameters.AddWithValue("@tax_money_rate", TaxMoneyRate);
+                    cmd.Parameters.AddWithValue("@tax_rate_fix", TaxRateFix);
+                    cmd.Parameters.AddWithValue("@exemsion", Exemsion);
+                    cmd.Parameters.AddWithValue("@net_tax", NetTax);
+                    cmd.Parameters.AddWithValue("@expense", Expense);
+                    cmd.Parameters.AddWithValue("@tax_year", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@updated_date", DateTime.Now);                   
 
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine("SQL Error " + e.Message);                
-        //    }
-        //    finally
-        //    {
-        //        try
-        //        {
-        //            this.conn.Close();
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e.ToString());
-        //        }
-        //    }
+                    cmd.ExecuteNonQuery();
 
-        //    return myReader;
-        //}
+                }
 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error " + e.Message);
+                return false;
+            }
+            finally
+            {
+                try
+                {
+                    this.conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
+
+            return true;
+        }
 
 
         public SqlDataAdapter Search(string personalId)
@@ -721,12 +828,9 @@ namespace personalTaxCalculate
             {
                 if (connectionState())  // open db connection
                 {
-                    myDataAdapter = new SqlDataAdapter("SELECT * FROM tax_personals WHERE personal_id = @personal_id", this.conn);
-                    myDataAdapter.SelectCommand.Parameters.AddWithValue("@personal_id", personalId);
-                    //string sqlInsert = "SELECT * FROM tax_personals WHERE personal_id = @personal_id, ";
-                    //SqlCommand cmd = new SqlCommand(sqlInsert, this.conn);
-                    //cmd.Parameters.AddWithValue("@personal_id", PersonalID);
-                    //return myDataAdapter = cmd.();
+                    myDataAdapter = new SqlDataAdapter("SELECT [personal_id],[first_name],[last_name],[birth_date],[personal_salary],[provident_fund],[qty_cripple],[qty_childen_nonstudy],[qty_childen_domesticstudy],[qty_childen_foreignstudy],[insurance_general],[insurance_pension],[insurance_parents],[social_insurance],[ltf_invest],[rfd1],[rfd2],[rfd3],[rfd4],[interrest_home],[donate_general],[donate_education],[net_income],[tax_rate],[tax_money_rate],[tax_rate_fix],[exemsion],[net_tax],[expense],[tax_year]" +
+                        " FROM tax_personals WHERE personal_id LIKE @personal_id", this.conn);
+                    myDataAdapter.SelectCommand.Parameters.AddWithValue("@personal_id", "%"+personalId+"%");
                 }
 
             }
@@ -747,6 +851,141 @@ namespace personalTaxCalculate
             }
 
             return myDataAdapter;
+        }
+
+
+        public TaxManager CheckPersonalID(string personalId)
+        {
+            
+            try
+            {
+                if (connectionState())  // open db connection
+                {
+                    SqlDataReader myReader = null;
+                    SqlCommand cmd = new SqlCommand("SELECT TOP 1 * FROM tax_personals WHERE personal_id = @personal_id ", this.conn);
+                    cmd.Parameters.AddWithValue("@personal_id", personalId);
+
+                    myReader = cmd.ExecuteReader();
+                    
+                    while (myReader.Read())
+                    {                        
+                        PersonalID = myReader["personal_id"].ToString();
+
+                        PersonalID = myReader["personal_id"].ToString();
+                        FirstName = myReader["first_name"].ToString();
+                        LastName = myReader["last_name"].ToString();
+                        BirthDate = Convert.ToDateTime(myReader["birth_date"]);
+                        PersonalSalary = Convert.ToDouble( myReader["personal_salary"]);
+                        IsProvidentFund = Convert.ToBoolean(myReader["is_provident_fund"]);
+                        ProvidentFund = myReader["provident_fund"].ToString();
+                        IsParentChecked = Convert.ToBoolean( myReader["is_parent_checked"]);
+                        IsChildenChecked = Convert.ToBoolean(myReader["is_childen_checked"]);
+                        IsCrippleChecked = Convert.ToBoolean(myReader["is_cripple_checked"]);
+                        IsParentDadChecked = Convert.ToBoolean( myReader["is_parent_dad_checked"]);
+                        IsParentMomChecked = Convert.ToBoolean(myReader["is_parent_mom_checked"]);
+                        QtyCripple = Convert.ToInt32( myReader["qty_cripple"]);
+                        QtyChildenNonStudy = Convert.ToInt32(myReader["qty_childen_nonstudy"]);
+                        QtyChildenDomesticStudy = Convert.ToInt32(myReader["qty_childen_domesticstudy"]);
+                        QtyChildenForeignStudy = Convert.ToInt32(myReader["qty_childen_foreignStudy"]);
+                        IsSingleChecked = Convert.ToBoolean( myReader["is_single_checked"]);
+                        IsMarryChecked = Convert.ToBoolean( myReader["is_marry_checked"]);
+                        IsDivorceChecked = Convert.ToBoolean( myReader["is_divorce_checked"]);
+                        IsMarryIncome = Convert.ToBoolean( myReader["is_marry_income"]);
+                        IsInsuanceGeneral = Convert.ToBoolean(myReader["is_insuance_general"]);
+                        IsInsurancPension = Convert.ToBoolean(myReader["is_insuranc_pension"]);
+                        IsInsuranceParents = Convert.ToBoolean(myReader["is_insurance_parents"]);
+                        InsuranceGeneral = Convert.ToDouble(myReader["insurance_general"]);
+                        InsurancePension = Convert.ToDouble(myReader["insurance_pension"]);
+                        InsuranceParents = Convert.ToDouble(myReader["insurance_parents"]);
+                        SocialInsurance = Convert.ToDouble(myReader["social_insurance"]);
+                        IsLTFinvest = Convert.ToBoolean(myReader["is_ltf_invest"]);
+                        LtfInvest = Convert.ToDouble(myReader["ltf_invest"]);
+                        IsRfd1 = Convert.ToBoolean( myReader["is_rfd1"]);
+                        IsRfd2 = Convert.ToBoolean( myReader["is_rfd2"]);
+                        IsRfd3 = Convert.ToBoolean( myReader["is_rfd3"]);
+                        IsRfd4 = Convert.ToBoolean( myReader["is_rfd4"]);
+                        Rfd1 = Convert.ToDouble(myReader["rfd1"]);
+                        Rfd2 = Convert.ToDouble(myReader["rfd2"]);
+                        Rfd3 = Convert.ToDouble(myReader["rfd3"]);
+                        Rfd4 = Convert.ToDouble(myReader["rfd4"]);
+                        IsHaveInterrset = Convert.ToBoolean(myReader["is_have_interrset"]);
+                        InterrestHome = Convert.ToDouble(myReader["interrest_home"]);
+                        IsDonate = Convert.ToBoolean(myReader["is_donate"]);
+                        IsDonateGeneral = Convert.ToBoolean(myReader["is_donate_general"]);
+                        IsDonateEducation = Convert.ToBoolean(myReader["is_donate_education"]);
+                        DonateGeneral = Convert.ToDouble(myReader["donate_general"]);
+                        DonateEducation = Convert.ToDouble(myReader["donate_education"]);
+                        NetIncome = Convert.ToDouble(myReader["net_income"]);
+                        TaxRate = Convert.ToDouble(myReader["tax_rate"]);
+                        TaxMoneyRate = Convert.ToDouble(myReader["tax_money_rate"]);
+                        TaxRateFix = Convert.ToDouble(myReader["tax_rate_fix"]);
+                        Exemsion = Convert.ToDouble(myReader["exemsion"]);
+                        NetTax = Convert.ToDouble(myReader["net_tax"]);
+                        Expense = Convert.ToDouble(myReader["expense"]);
+                        
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error " + e.Message);
+            }
+            finally
+            {
+                try
+                {
+                    this.conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
+
+            return this;
+        }
+
+        public int countPersonalID(string personalId)
+        {
+            int cntPID = 0;
+
+            try
+            {
+                if (connectionState())  // open db connection
+                {
+                    SqlDataReader myReader = null;
+                    SqlCommand cmd = new SqlCommand("SELECT count(personal_id) as COUNT_PID FROM tax_personals WHERE personal_id = @personal_id ", this.conn);
+                    cmd.Parameters.AddWithValue("@personal_id", personalId);
+
+                    myReader = cmd.ExecuteReader();
+
+                    while (myReader.Read())
+                    {
+                        cntPID = Convert.ToInt32(myReader["COUNT_PID"]);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("SQL Error " + e.Message);
+            }
+            finally
+            {
+                try
+                {
+                    this.conn.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+            }
+
+            return cntPID;
         }
     }
 }

@@ -33,6 +33,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblExemsionDonate = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -70,13 +71,34 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picPerson = new System.Windows.Forms.PictureBox();
+            this.picRelation = new System.Windows.Forms.PictureBox();
+            this.picChliden = new System.Windows.Forms.PictureBox();
+            this.picInterestHome = new System.Windows.Forms.PictureBox();
+            this.picRMF = new System.Windows.Forms.PictureBox();
+            this.picLTF = new System.Windows.Forms.PictureBox();
+            this.picInsurance = new System.Windows.Forms.PictureBox();
+            this.picSocialInsurance = new System.Windows.Forms.PictureBox();
+            this.picCripple = new System.Windows.Forms.PictureBox();
+            this.picParents = new System.Windows.Forms.PictureBox();
+            this.picDonate = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRelation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChliden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInterestHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRMF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLTF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInsurance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialInsurance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCripple)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picParents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDonate)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,8 +153,29 @@
             this.panel2.Size = new System.Drawing.Size(784, 641);
             this.panel2.TabIndex = 35;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::personalTaxCalculate.Properties.Resources.presentation_12;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.picDonate);
+            this.groupBox3.Controls.Add(this.picParents);
+            this.groupBox3.Controls.Add(this.picCripple);
+            this.groupBox3.Controls.Add(this.picSocialInsurance);
+            this.groupBox3.Controls.Add(this.picInsurance);
+            this.groupBox3.Controls.Add(this.picLTF);
+            this.groupBox3.Controls.Add(this.picRMF);
+            this.groupBox3.Controls.Add(this.picInterestHome);
+            this.groupBox3.Controls.Add(this.picChliden);
+            this.groupBox3.Controls.Add(this.picRelation);
+            this.groupBox3.Controls.Add(this.picPerson);
             this.groupBox3.Controls.Add(this.lblExemsionDonate);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.lblExemsionRelationStatus);
@@ -168,7 +211,7 @@
             // 
             this.lblExemsionDonate.AutoSize = true;
             this.lblExemsionDonate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionDonate.Location = new System.Drawing.Point(261, 490);
+            this.lblExemsionDonate.Location = new System.Drawing.Point(266, 490);
             this.lblExemsionDonate.Name = "lblExemsionDonate";
             this.lblExemsionDonate.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionDonate.TabIndex = 35;
@@ -177,7 +220,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(25, 490);
+            this.label16.Location = new System.Drawing.Point(30, 490);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(123, 25);
             this.label16.TabIndex = 34;
@@ -187,7 +230,7 @@
             // 
             this.lblExemsionRelationStatus.AutoSize = true;
             this.lblExemsionRelationStatus.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionRelationStatus.Location = new System.Drawing.Point(261, 99);
+            this.lblExemsionRelationStatus.Location = new System.Drawing.Point(266, 99);
             this.lblExemsionRelationStatus.Name = "lblExemsionRelationStatus";
             this.lblExemsionRelationStatus.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionRelationStatus.TabIndex = 33;
@@ -196,7 +239,7 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(25, 99);
+            this.lbl.Location = new System.Drawing.Point(30, 99);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(86, 25);
             this.lbl.TabIndex = 32;
@@ -206,7 +249,7 @@
             // 
             this.lblExemsionInterrestHome.AutoSize = true;
             this.lblExemsionInterrestHome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionInterrestHome.Location = new System.Drawing.Point(261, 451);
+            this.lblExemsionInterrestHome.Location = new System.Drawing.Point(266, 451);
             this.lblExemsionInterrestHome.Name = "lblExemsionInterrestHome";
             this.lblExemsionInterrestHome.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionInterrestHome.TabIndex = 31;
@@ -215,7 +258,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(25, 451);
+            this.label14.Location = new System.Drawing.Point(30, 451);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(206, 25);
             this.label14.TabIndex = 30;
@@ -225,7 +268,7 @@
             // 
             this.lblExemsionRMF.AutoSize = true;
             this.lblExemsionRMF.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionRMF.Location = new System.Drawing.Point(261, 410);
+            this.lblExemsionRMF.Location = new System.Drawing.Point(266, 410);
             this.lblExemsionRMF.Name = "lblExemsionRMF";
             this.lblExemsionRMF.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionRMF.TabIndex = 29;
@@ -234,7 +277,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(25, 410);
+            this.label13.Location = new System.Drawing.Point(30, 410);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(122, 25);
             this.label13.TabIndex = 28;
@@ -244,7 +287,7 @@
             // 
             this.lblExemsionLTF.AutoSize = true;
             this.lblExemsionLTF.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionLTF.Location = new System.Drawing.Point(261, 365);
+            this.lblExemsionLTF.Location = new System.Drawing.Point(266, 365);
             this.lblExemsionLTF.Name = "lblExemsionLTF";
             this.lblExemsionLTF.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionLTF.TabIndex = 27;
@@ -253,7 +296,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(25, 365);
+            this.label15.Location = new System.Drawing.Point(30, 365);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(68, 25);
             this.label15.TabIndex = 26;
@@ -263,7 +306,7 @@
             // 
             this.lblExemsionInsurance.AutoSize = true;
             this.lblExemsionInsurance.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionInsurance.Location = new System.Drawing.Point(261, 320);
+            this.lblExemsionInsurance.Location = new System.Drawing.Point(266, 320);
             this.lblExemsionInsurance.Name = "lblExemsionInsurance";
             this.lblExemsionInsurance.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionInsurance.TabIndex = 25;
@@ -272,7 +315,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(25, 320);
+            this.label17.Location = new System.Drawing.Point(30, 320);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(147, 25);
             this.label17.TabIndex = 24;
@@ -282,7 +325,7 @@
             // 
             this.lblExemsionSocailInsurance.AutoSize = true;
             this.lblExemsionSocailInsurance.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionSocailInsurance.Location = new System.Drawing.Point(261, 280);
+            this.lblExemsionSocailInsurance.Location = new System.Drawing.Point(266, 280);
             this.lblExemsionSocailInsurance.Name = "lblExemsionSocailInsurance";
             this.lblExemsionSocailInsurance.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionSocailInsurance.TabIndex = 23;
@@ -291,7 +334,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(25, 280);
+            this.label12.Location = new System.Drawing.Point(30, 280);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(157, 25);
             this.label12.TabIndex = 22;
@@ -301,7 +344,7 @@
             // 
             this.lblExemsionCripple.AutoSize = true;
             this.lblExemsionCripple.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionCripple.Location = new System.Drawing.Point(261, 235);
+            this.lblExemsionCripple.Location = new System.Drawing.Point(266, 235);
             this.lblExemsionCripple.Name = "lblExemsionCripple";
             this.lblExemsionCripple.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionCripple.TabIndex = 21;
@@ -310,7 +353,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 235);
+            this.label11.Location = new System.Drawing.Point(30, 235);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 25);
             this.label11.TabIndex = 20;
@@ -320,7 +363,7 @@
             // 
             this.lblExemsionParent.AutoSize = true;
             this.lblExemsionParent.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionParent.Location = new System.Drawing.Point(261, 190);
+            this.lblExemsionParent.Location = new System.Drawing.Point(266, 190);
             this.lblExemsionParent.Name = "lblExemsionParent";
             this.lblExemsionParent.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionParent.TabIndex = 19;
@@ -329,7 +372,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(25, 190);
+            this.label10.Location = new System.Drawing.Point(30, 190);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 25);
             this.label10.TabIndex = 18;
@@ -339,7 +382,7 @@
             // 
             this.lblExemsionChilden.AutoSize = true;
             this.lblExemsionChilden.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionChilden.Location = new System.Drawing.Point(261, 145);
+            this.lblExemsionChilden.Location = new System.Drawing.Point(266, 145);
             this.lblExemsionChilden.Name = "lblExemsionChilden";
             this.lblExemsionChilden.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionChilden.TabIndex = 17;
@@ -348,7 +391,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 145);
+            this.label8.Location = new System.Drawing.Point(30, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 25);
             this.label8.TabIndex = 16;
@@ -358,7 +401,7 @@
             // 
             this.lblExemsionPersonal.AutoSize = true;
             this.lblExemsionPersonal.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblExemsionPersonal.Location = new System.Drawing.Point(261, 50);
+            this.lblExemsionPersonal.Location = new System.Drawing.Point(266, 50);
             this.lblExemsionPersonal.Name = "lblExemsionPersonal";
             this.lblExemsionPersonal.Size = new System.Drawing.Size(19, 25);
             this.lblExemsionPersonal.TabIndex = 15;
@@ -367,7 +410,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 50);
+            this.label7.Location = new System.Drawing.Point(30, 50);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 25);
             this.label7.TabIndex = 14;
@@ -520,15 +563,126 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "นามสกุล";
             // 
-            // pictureBox1
+            // picPerson
             // 
-            this.pictureBox1.Image = global::personalTaxCalculate.Properties.Resources.presentation_12;
-            this.pictureBox1.Location = new System.Drawing.Point(332, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.picPerson.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picPerson.Location = new System.Drawing.Point(569, 50);
+            this.picPerson.Name = "picPerson";
+            this.picPerson.Size = new System.Drawing.Size(32, 32);
+            this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPerson.TabIndex = 36;
+            this.picPerson.TabStop = false;
+            this.picPerson.Click += new System.EventHandler(this.picPerson_Click);
+            // 
+            // picRelation
+            // 
+            this.picRelation.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picRelation.Location = new System.Drawing.Point(569, 92);
+            this.picRelation.Name = "picRelation";
+            this.picRelation.Size = new System.Drawing.Size(32, 32);
+            this.picRelation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRelation.TabIndex = 37;
+            this.picRelation.TabStop = false;
+            this.picRelation.Click += new System.EventHandler(this.picRelation_Click);
+            // 
+            // picChliden
+            // 
+            this.picChliden.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picChliden.Location = new System.Drawing.Point(569, 138);
+            this.picChliden.Name = "picChliden";
+            this.picChliden.Size = new System.Drawing.Size(32, 32);
+            this.picChliden.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picChliden.TabIndex = 38;
+            this.picChliden.TabStop = false;
+            this.picChliden.Click += new System.EventHandler(this.picChliden_Click);
+            // 
+            // picInterestHome
+            // 
+            this.picInterestHome.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picInterestHome.Location = new System.Drawing.Point(569, 444);
+            this.picInterestHome.Name = "picInterestHome";
+            this.picInterestHome.Size = new System.Drawing.Size(32, 32);
+            this.picInterestHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInterestHome.TabIndex = 39;
+            this.picInterestHome.TabStop = false;
+            this.picInterestHome.Click += new System.EventHandler(this.picInterestHome_Click);
+            // 
+            // picRMF
+            // 
+            this.picRMF.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picRMF.Location = new System.Drawing.Point(569, 403);
+            this.picRMF.Name = "picRMF";
+            this.picRMF.Size = new System.Drawing.Size(32, 32);
+            this.picRMF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRMF.TabIndex = 40;
+            this.picRMF.TabStop = false;
+            this.picRMF.Click += new System.EventHandler(this.picRMF_Click);
+            // 
+            // picLTF
+            // 
+            this.picLTF.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picLTF.Location = new System.Drawing.Point(569, 358);
+            this.picLTF.Name = "picLTF";
+            this.picLTF.Size = new System.Drawing.Size(32, 32);
+            this.picLTF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLTF.TabIndex = 41;
+            this.picLTF.TabStop = false;
+            this.picLTF.Click += new System.EventHandler(this.picLTF_Click);
+            // 
+            // picInsurance
+            // 
+            this.picInsurance.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picInsurance.Location = new System.Drawing.Point(569, 320);
+            this.picInsurance.Name = "picInsurance";
+            this.picInsurance.Size = new System.Drawing.Size(32, 32);
+            this.picInsurance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInsurance.TabIndex = 42;
+            this.picInsurance.TabStop = false;
+            this.picInsurance.Click += new System.EventHandler(this.picInsurance_Click);
+            // 
+            // picSocialInsurance
+            // 
+            this.picSocialInsurance.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picSocialInsurance.Location = new System.Drawing.Point(569, 273);
+            this.picSocialInsurance.Name = "picSocialInsurance";
+            this.picSocialInsurance.Size = new System.Drawing.Size(32, 32);
+            this.picSocialInsurance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSocialInsurance.TabIndex = 43;
+            this.picSocialInsurance.TabStop = false;
+            this.picSocialInsurance.Click += new System.EventHandler(this.picSocialInsurance_Click);
+            // 
+            // picCripple
+            // 
+            this.picCripple.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picCripple.Location = new System.Drawing.Point(569, 228);
+            this.picCripple.Name = "picCripple";
+            this.picCripple.Size = new System.Drawing.Size(32, 32);
+            this.picCripple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCripple.TabIndex = 44;
+            this.picCripple.TabStop = false;
+            this.picCripple.Click += new System.EventHandler(this.picCripple_Click);
+            // 
+            // picParents
+            // 
+            this.picParents.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picParents.Location = new System.Drawing.Point(569, 183);
+            this.picParents.Name = "picParents";
+            this.picParents.Size = new System.Drawing.Size(32, 32);
+            this.picParents.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picParents.TabIndex = 45;
+            this.picParents.TabStop = false;
+            this.picParents.Click += new System.EventHandler(this.picParents_Click);
+            // 
+            // picDonate
+            // 
+            this.picDonate.Image = global::personalTaxCalculate.Properties.Resources.info_512pxGREY;
+            this.picDonate.Location = new System.Drawing.Point(569, 482);
+            this.picDonate.Name = "picDonate";
+            this.picDonate.Size = new System.Drawing.Size(32, 32);
+            this.picDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDonate.TabIndex = 46;
+            this.picDonate.TabStop = false;
+            this.picDonate.Click += new System.EventHandler(this.picDonate_Click);
             // 
             // frmSumary
             // 
@@ -545,13 +699,24 @@
             this.Load += new System.EventHandler(this.frmSumary_Load);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRelation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChliden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInterestHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRMF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLTF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInsurance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSocialInsurance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCripple)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picParents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDonate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,5 +766,16 @@
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lblExemsionDonate;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox picDonate;
+        private System.Windows.Forms.PictureBox picParents;
+        private System.Windows.Forms.PictureBox picCripple;
+        private System.Windows.Forms.PictureBox picSocialInsurance;
+        private System.Windows.Forms.PictureBox picInsurance;
+        private System.Windows.Forms.PictureBox picLTF;
+        private System.Windows.Forms.PictureBox picRMF;
+        private System.Windows.Forms.PictureBox picInterestHome;
+        private System.Windows.Forms.PictureBox picChliden;
+        private System.Windows.Forms.PictureBox picRelation;
+        private System.Windows.Forms.PictureBox picPerson;
     }
 }

@@ -230,5 +230,24 @@ namespace personalTaxCalculate
         {
 
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ค่าเลี้ยงดูพ่อแม่ คนละ 30,000 บาท ถ้าพ่อแม่อายุมากกว่า 60 ปี และมีรายได้ทั้งปีไม่เกิน 30,000 บาท จะมีสิทธิหักลดหย่อนค่าเลี้ยงดูได้คนละ 30,000 บาท ", "เงื่อนไขในการลดหย่อน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ค่าลดหย่อนค่าอุปการะเลี้ยงดูคนพิการหรือคนทุพพลภาพจำนวน 60,000 บาท", "เงื่อนไขในการลดหย่อน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ค่าลดหย่อนบุตรและการศึกษาบุตรจำนวน 15,000 บาท" +
+                "สามารถนำมาหักลดหย่อนได้ คนละ 15,000 บาท " +
+                "และหักได้สูงสุดไม่เกิน 3 คน (นับเฉพาะทีมีชีวิต)" +
+                "บุตรที่กำลังศึกษาภายในประเทศ โดยจะได้รับค่าลดหย่อนเพิ่มเติมอีกคนละ 2,000 บาท", "เงื่อนไขในการลดหย่อน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

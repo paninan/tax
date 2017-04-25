@@ -31,6 +31,7 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,7 +61,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -114,6 +114,16 @@
             this.panel2.Size = new System.Drawing.Size(784, 761);
             this.panel2.TabIndex = 31;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label11.Location = new System.Drawing.Point(214, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(362, 31);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "ค่าลดหย่อนพ่อแม่ ผู้พิการ และบุตร";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -164,6 +174,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label10
             // 
@@ -294,6 +305,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label13
             // 
@@ -374,6 +386,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // button2
             // 
@@ -447,16 +460,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(784, 60);
             this.panel4.TabIndex = 35;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label11.Location = new System.Drawing.Point(214, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(362, 31);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "ค่าลดหย่อนพ่อแม่ ผู้พิการ และบุตร";
             // 
             // frmChildrenParentsCripple
             // 

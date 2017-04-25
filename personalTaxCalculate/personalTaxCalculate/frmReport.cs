@@ -14,6 +14,7 @@ namespace personalTaxCalculate
     {
         private TaxManager taxMng;
         internal TaxManager TaxMng { get => taxMng; set => taxMng = value; }
+        
 
         public frmReport()
         {
@@ -37,6 +38,7 @@ namespace personalTaxCalculate
 
             // set image chart
             taxMng.CalNetTax();
+           
             pictureBox1.Image = picTaxRate();            
             groupBox1.Text = "จ่ายภาษี Rate "+taxMng.TaxRate;
             textBox2.Text = Utils.MoneyFormat(taxMng.NetIncome.ToString());
@@ -98,10 +100,34 @@ namespace personalTaxCalculate
         private void btnNext_Click(object sender, EventArgs e)
         {
             // save 
-            if (taxMng.save())
+
+            if (taxMng.countPersonalID(taxMng.PersonalID) == 0)
             {
-                MessageBox.Show("บันทึก ข้อมูล เรียนร้อย ");
+                // new
+                if (taxMng.save())
+                {
+                    MessageBox.Show("เพิ่มข้อมูล เรียนร้อย ");
+                }
             }
+            else
+            {
+                // update
+                if (taxMng.update())
+                {
+                    MessageBox.Show("เปลี่ยนแปลงข้อมูล เรียนร้อย ");
+                }
+            }
+
+         
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMain frm = new frmMain();
+            frm.TaxMng = taxMng;
+
+            frm.Show();
         }
     }
 }

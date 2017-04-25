@@ -54,7 +54,11 @@ namespace personalTaxCalculate
             }            
             else
             {
-                // 
+
+
+                // check record exits 
+                taxMng = taxMng.CheckPersonalID(textBox1.Text);
+
                 // TaxManager taxMng = new TaxManager();
                 taxMng.PersonalID = textBox1.Text;
                 taxMng.FirstName = textBox2.Text;

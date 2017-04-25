@@ -17,7 +17,7 @@ namespace personalTaxCalculate
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmReport frm = new frmReport();
+            frmSearch frm = new frmSearch();
             frm.TaxMng = sTaxMng;
             frm.Show();
             Application.Run();
