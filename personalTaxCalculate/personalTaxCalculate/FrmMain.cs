@@ -29,6 +29,8 @@ namespace personalTaxCalculate
             }
 
             statusStrip1.Text = "Personal Tax Calulator";
+
+            
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -40,8 +42,6 @@ namespace personalTaxCalculate
         {
             
            
-            
-
 
         }
 
@@ -72,6 +72,16 @@ namespace personalTaxCalculate
                 Application.Exit();
             }
 
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Now.ToLongDateString() +"   " + DateTime.Now.ToLongTimeString();
         }
     }
 }

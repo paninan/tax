@@ -56,7 +56,7 @@ namespace personalTaxCalculate
             {
 
 
-                // check record exits 
+                // check record Alrady 
                 taxMng = taxMng.CheckPersonalID(textBox1.Text);
 
                 // TaxManager taxMng = new TaxManager();

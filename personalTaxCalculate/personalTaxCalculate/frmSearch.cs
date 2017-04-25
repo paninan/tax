@@ -71,6 +71,8 @@ namespace personalTaxCalculate
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
+            CheckEnter(sender,e);
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
@@ -80,6 +82,29 @@ namespace personalTaxCalculate
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+            
+        }
+
+        private void CheckEnter(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (textBox1.Text.Length > 5)
+                {
+                    // get personal id
+                    DataTable dt = new DataTable();
+                    SDA = taxMng.Search(textBox1.Text);
+                    SDA.Fill(dt);
+
+                    // show on data grid
+                    dataGridView1.DataSource = dt;
+
+                }
+                else
+                {
+                    MessageBox.Show("กรุณากรอก เลขบัตรประจำตัวประชาชน มากกว่า 5 หลัก ค่ะ", "ข้อมูลไม่ครบ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

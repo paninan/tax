@@ -17,12 +17,10 @@ namespace personalTaxCalculate
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmSearch frm = new frmSearch();
+            frmMain frm = new frmMain();
             frm.TaxMng = sTaxMng;
             frm.Show();
             Application.Run();
-
-            //Application.Run(new frmDonate());
         }
     }
 }
