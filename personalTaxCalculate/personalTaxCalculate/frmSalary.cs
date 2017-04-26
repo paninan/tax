@@ -13,7 +13,13 @@ namespace personalTaxCalculate
     public partial class frmSalary : Form
     {
         private TaxManager taxMng;
-        internal TaxManager TaxMng { get => taxMng; set => taxMng = value; }
+        //internal TaxManager TaxMng { get => taxMng; set => taxMng = value; }
+
+        internal TaxManager TaxMng
+        {
+            get { return taxMng; }
+            set { taxMng = value; }
+        }
 
         public frmSalary()
         {

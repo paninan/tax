@@ -89,63 +89,63 @@ namespace personalTaxCalculate
         private double expense = 0;
 
         // helpers
-        public string PersonalID { get => personalID; set => personalID = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
-        public DateTime BirthDate { get => birthDate; set => birthDate = value; }
-        public double PersonalSalary { get => PersonalSalary1; set => PersonalSalary1 = value; }
-        public bool IsProvidentFund { get => isProvidentFund; set => isProvidentFund = value; }
-        public string ProvidentFund { get => providentFund; set => providentFund = value; }
-        public bool IsParentChecked { get => isParentChecked; set => isParentChecked = value; }
-        public bool IsChildenChecked { get => isChildenChecked; set => isChildenChecked = value; }
-        public bool IsCrippleChecked { get => isCrippleChecked; set => isCrippleChecked = value; }
-        public bool IsParentDadChecked { get => isParentDadChecked; set => isParentDadChecked = value; }
-        public bool IsParentMomChecked { get => isParentMomChecked; set => isParentMomChecked = value; }
-        public int QtyCripple { get => qtyCripple; set => qtyCripple = value; }
-        public int QtyChildenNonStudy { get => qtyChildenNonStudy; set => qtyChildenNonStudy = value; }
-        public int QtyChildenDomesticStudy { get => qtyChildenDomesticStudy; set => qtyChildenDomesticStudy = value; }
-        public int QtyChildenForeignStudy { get => qtyChildenForeignStudy; set => qtyChildenForeignStudy = value; }
-        public bool IsSingleChecked { get => isSingleChecked; set => isSingleChecked = value; }
-        public bool IsMarryChecked { get => isMarryChecked; set => isMarryChecked = value; }
-        public bool IsDivorceChecked { get => isDivorceChecked; set => isDivorceChecked = value; }
-        public bool IsMarryIncome { get => isMarryIncome; set => isMarryIncome = value; }
-        public bool IsInsuanceGeneral { get => isInsuanceGeneral; set => isInsuanceGeneral = value; }
-        public bool IsInsurancPension { get => isInsurancPension; set => isInsurancPension = value; }
-        public bool IsInsuranceParents { get => isInsuranceParents; set => isInsuranceParents = value; }
-        public double InsuranceGeneral { get => insuranceGeneral; set => insuranceGeneral = value; }
-        public double InsurancePension { get => insurancePension; set => insurancePension = value; }
-        public double InsuranceParents { get => insuranceParents; set => insuranceParents = value; }
-        public double SocialInsurance { get => socialInsurance; set => socialInsurance = value; }
-        public bool IsLTFinvest { get => isLTFinvest; set => isLTFinvest = value; }
-        public double LtfInvest { get => ltfInvest; set => ltfInvest = value; }
-        public double Rfd1 { get => rfd1; set => rfd1 = value; }
-        public double Rfd2 { get => rfd2; set => rfd2 = value; }
-        public double Rfd3 { get => rfd3; set => rfd3 = value; }
-        public double Rfd4 { get => rfd4; set => rfd4 = value; }
-        public bool IsHaveInterrset { get => isHaveInterrset; set => isHaveInterrset = value; }
-        public double InterrestHome { get => interrestHome; set => interrestHome = value; }
-        public bool IsDonate { get => isDonate; set => isDonate = value; }
-        public double DonateGeneral { get => donateGeneral; set => donateGeneral = value; }
-        public double DonateEducation { get => donateEducation; set => donateEducation = value; }
-        public double DonateFlood { get => donateFlood; set => donateFlood = value; }
-        public bool IsRfd1 { get => isRfd1; set => isRfd1 = value; }
-        public bool IsRfd2 { get => isRfd2; set => isRfd2 = value; }
-        public bool IsRfd3 { get => isRfd3; set => isRfd3 = value; }
-        public bool IsRfd4 { get => isRfd4; set => isRfd4 = value; }
-        public bool IsDonateFlood { get => isDonateFlood; set => isDonateFlood = value; }
-        public bool IsDonateEducation { get => isDonateEducation; set => isDonateEducation = value; }
-        public bool IsDonateGeneral { get => isDonateGeneral; set => isDonateGeneral = value; }
-        public double PersonalSalary1 { get => personalSalary; set => personalSalary = value; }
-        public double NetIncome { get => netIncome; set => netIncome = value; }
-        public double TaxRate { get => taxRate; set => taxRate = value; }
-        public double TaxMoneyRate { get => taxMoneyRate; set => taxMoneyRate = value; }
-        public double TaxRateFix { get => taxRateFix; set => taxRateFix = value; }
-        public double Exemsion { get => exemsion; set => exemsion = value; }
-        public double NetTax { get => netTax; set => netTax = value; }
-        public double Expense { get => expense; set => expense = value; }
+        public string PersonalID { get { return personalID; } set { personalID = value; } }
+        public string FirstName { get { return firstName; } set { firstName = value; } }
+        public string LastName { get { return lastName; } set { lastName = value; } }
+        public DateTime BirthDate { get { return birthDate; } set { birthDate = value; } }
+        public double PersonalSalary { get { return PersonalSalary1; } set { PersonalSalary1 = value; } }
+        public bool IsProvidentFund { get { return isProvidentFund; } set { isProvidentFund = value; } }
+        public string ProvidentFund { get { return providentFund; } set { providentFund = value; } }
+        public bool IsParentChecked { get { return isParentChecked; } set { isParentChecked = value; } }
+        public bool IsChildenChecked { get { return isChildenChecked; } set { isChildenChecked = value; } }
+        public bool IsCrippleChecked { get { return isCrippleChecked; } set { isCrippleChecked = value; } }
+        public bool IsParentDadChecked { get { return isParentDadChecked; } set { isParentDadChecked = value; } }
+        public bool IsParentMomChecked { get { return isParentMomChecked; } set { isParentMomChecked = value; } }
+        public int QtyCripple { get { return qtyCripple; } set { qtyCripple = value; } }
+        public int QtyChildenNonStudy { get { return qtyChildenNonStudy; } set { qtyChildenNonStudy = value; } }
+        public int QtyChildenDomesticStudy { get { return qtyChildenDomesticStudy; } set { qtyChildenDomesticStudy = value; } }
+        public int QtyChildenForeignStudy { get { return qtyChildenForeignStudy; } set { qtyChildenForeignStudy = value; } }
+        public bool IsSingleChecked { get { return isSingleChecked; } set { isSingleChecked = value; } }
+        public bool IsMarryChecked { get { return isMarryChecked; } set { isMarryChecked = value; } }
+        public bool IsDivorceChecked { get { return isDivorceChecked; } set { isDivorceChecked = value; } }
+        public bool IsMarryIncome { get { return isMarryIncome; } set { isMarryIncome = value; } }
+        public bool IsInsuanceGeneral { get { return isInsuanceGeneral; } set { isInsuanceGeneral = value; } }
+        public bool IsInsurancPension { get { return isInsurancPension; } set { isInsurancPension = value; } }
+        public bool IsInsuranceParents { get { return isInsuranceParents; } set { isInsuranceParents = value; } }
+        public double InsuranceGeneral { get { return insuranceGeneral; } set { insuranceGeneral = value; } }
+        public double InsurancePension { get { return insurancePension; } set { insurancePension = value; } }
+        public double InsuranceParents { get { return insuranceParents; } set { insuranceParents = value; } }
+        public double SocialInsurance { get { return socialInsurance; } set { socialInsurance = value; } }
+        public bool IsLTFinvest { get { return isLTFinvest; } set { isLTFinvest = value; } }
+        public double LtfInvest { get { return ltfInvest; } set { ltfInvest = value; } }
+        public double Rfd1 { get { return rfd1; } set { rfd1 = value; } }
+        public double Rfd2 { get { return rfd2; } set { rfd2 = value; } }
+        public double Rfd3 { get { return rfd3; } set { rfd3 = value; } }
+        public double Rfd4 { get { return rfd4; } set { rfd4 = value; } }
+        public bool IsHaveInterrset { get { return isHaveInterrset; } set { isHaveInterrset = value; } }
+        public double InterrestHome { get { return interrestHome; } set { interrestHome = value; } }
+        public bool IsDonate { get { return isDonate; } set { isDonate = value; } }
+        public double DonateGeneral { get { return donateGeneral; } set { donateGeneral = value; } }
+        public double DonateEducation { get { return donateEducation; } set { donateEducation = value; } }
+        public double DonateFlood { get { return donateFlood; } set { donateFlood = value; } }
+        public bool IsRfd1 { get { return isRfd1; } set { isRfd1 = value; } }
+        public bool IsRfd2 { get { return isRfd2; } set { isRfd2 = value; } }
+        public bool IsRfd3 { get { return isRfd3; } set { isRfd3 = value; } }
+        public bool IsRfd4 { get { return isRfd4; } set { isRfd4 = value; } }
+        public bool IsDonateFlood { get { return isDonateFlood; } set { isDonateFlood = value; } }
+        public bool IsDonateEducation { get { return isDonateEducation; } set { isDonateEducation = value; } }
+        public bool IsDonateGeneral { get { return isDonateGeneral; } set { isDonateGeneral = value; } }
+        public double PersonalSalary1 { get { return personalSalary; } set { personalSalary = value; } }
+        public double NetIncome { get { return netIncome; } set { netIncome = value; } }
+        public double TaxRate { get { return taxRate; } set { taxRate = value; } }
+        public double TaxMoneyRate { get { return taxMoneyRate; } set { taxMoneyRate = value; } }
+        public double TaxRateFix { get { return taxRateFix; } set { taxRateFix = value; } }
+        public double Exemsion { get { return exemsion; } set { exemsion = value; } }
+        public double NetTax { get { return netTax; } set { netTax = value; } }
+        public double Expense { get { return expense; } set { expense = value; } }
 
-        // Connectinon
-        private static String CONN_STATE_FAIL = "Fail";
+// Connectinon
+private static String CONN_STATE_FAIL = "Fail";
         private static String CONN_STATE_OK = "Success";
         private static String connectionString = "Data Source=.;Initial Catalog=projectTax;Integrated Security=True";
         private SqlConnection conn = null;
